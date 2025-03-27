@@ -1,6 +1,11 @@
 import { Header } from '../components/Header';
-import styles from './page.module.css';
+import { Main } from '../components/Main';
 
 export default function Home() {
-  return <Header className={styles.header} />;
+  return (
+    <>
+      <Header />
+      <Main />
+    </>
+  );
 }

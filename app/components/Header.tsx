@@ -1,41 +1,34 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
-import styles from '../(home)/page.module.css';
+import styles from '../styles/Header.module.css';
 
-interface HeaderProps {
-  className?: string;
-}
-
-export function Header({ className }: HeaderProps) {
+export const Header = () => {
   return (
-    <header className={`${styles.header} ${className}`}>
+    <header className={styles.header}>
       <Image
-        src={'/assets/Logos.webp'}
-        alt={'Logo'}
+        src='/assets/Logos.webp'
+        alt='Dungeon Blitz & BlitzForge Studios'
         width={150}
         height={0}
         style={{ height: 'auto' }}
       />
-      <nav className={styles.nav}>
+      <nav>
         <ul className={styles.navList}>
-          <li className={styles.navItem}>
-            <a href={'#game'} className={styles.navLink}>
-              Game
-            </a>
+          <li className={styles.selectedNavItem}>
+            <Link href='#game'>game</Link>
           </li>
-          <li className={styles.navItem}>
-            <a href={'#disciplines'} className={styles.navLink}>
-              Disciplines
-            </a>
+          <li>
+            <Link href='#disciplines'>disciplines</Link>
           </li>
-          <li className={styles.navItem}>
-            <a href={'#team'} className={styles.navLink}>
-              Team
-            </a>
+          <li>
+            <Link href='#team'>team</Link>
           </li>
         </ul>
       </nav>
-      <button className={styles.button}>Launch game</button>
+      <button disabled className={styles.button}>
+        launch game
+      </button>
     </header>
   );
-}
+};
