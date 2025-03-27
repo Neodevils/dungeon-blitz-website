@@ -21,7 +21,7 @@
   height: 100px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url('/public/assets/nav-border.webp');
+  background-image: url('/assets/nav-border.webp');
 }
 
 :global(button) {
