@@ -1,0 +1,41 @@
+:global(header) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  padding: 1em 3em;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  gap: 1em;
+}
+
+.selectedNavItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  width: 150px;
+  height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url('/assets/nav-border.webp');
+}
+
+:global(button) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  padding: 0.4em 0.8em;
+  border: 1px solid #eabf6a;
+  background-color: #a84b4b;
+  text-align: center;
+  color: white;
+  font-family: 'Baskerville';
+  text-transform: uppercase;
+  font-size: medium;
+  font-weight: 600;
+}
